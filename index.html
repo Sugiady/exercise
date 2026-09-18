@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pilot Ground School</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">LEARN AS WE FLY</p>
+        <h1>Pilot Ground School ✈️</h1>
+        <p class="sub">v0.1 · 只考已经学过的内容</p>
+      </div>
+      <div class="badge">METAR · WEATHER · AERO</div>
+    </header>
+
+    <section class="panel" id="startPanel">
+      <h2>今日练习</h2>
+      <p>10 题随机抽取。交卷后显示分数、解析和错题。</p>
+      <div class="chips">
+        <span>Stall / AoA</span><span>Turns</span><span>Fog</span>
+        <span>Cloud base</span><span>METAR</span><span>Zulu</span>
+      </div>
+      <button id="startBtn">Start quiz</button>
+    </section>
+
+    <form id="quizForm" class="hidden"></form>
+
+    <section id="resultPanel" class="panel hidden">
+      <div class="scoreline">
+        <div>
+          <p class="eyebrow">RESULT</p>
+          <h2 id="scoreText"></h2>
+        </div>
+        <div id="reward" class="reward"></div>
+      </div>
+      <div id="review"></div>
+      <button id="retryBtn">再来一轮</button>
+    </section>
+
+    <footer>
+      Study aid only · 不替代 CFI、官方 FAA 资料或正式飞行天气简报。
+    </footer>
+  </main>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
