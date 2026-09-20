@@ -20,3 +20,19 @@ button:hover{filter:brightness(.96)} .hidden{display:none!important}
 .correct{color:var(--good);font-weight:700}.wrong{color:var(--bad);font-weight:700}.reward{font-size:22px}
 footer{text-align:center;margin-top:28px;font-size:12px}
 @media(max-width:620px){.hero,.scoreline{align-items:flex-start;flex-direction:column}.badge{display:none}}
+
+
+.flightlog{overflow:hidden}
+.flightlog-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:14px}
+.logbook-stamp{border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:11px;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+.flight-entry{border-top:1px solid var(--line);padding-top:18px}
+.flight-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.airport-code{font-size:28px;font-weight:800;letter-spacing:.06em}
+.route-line{font-size:23px;color:var(--accent)}
+.destination{font-weight:700}
+.flight-entry h3{margin:.1em 0 .45em;font-size:22px}
+.flight-note{line-height:1.7;margin:.4em 0 1em}
+.flight-meta{display:flex;flex-wrap:wrap;gap:8px}
+.flight-meta span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#f9fbfc;color:var(--muted)}
+.flightlog-foot{margin:18px 0 0;padding-top:14px;border-top:1px dashed var(--line);color:var(--muted);font-size:13px;line-height:1.6}
+@media(max-width:620px){.flightlog-head{flex-direction:column}.airport-code{font-size:24px}}
