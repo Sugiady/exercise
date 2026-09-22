@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Take Me to the Clouds</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">LEARN AS WE FLY</p>
+        <h1>Take Me to the Clouds ✈️</h1>
+        <p class="sub">our little ground school · 学到哪，飞到哪</p>
+      </div>
+      <div class="badge">METAR · WEATHER · AIRSPACE · AERO</div>
+    </header>
+
+    <section class="panel" id="startPanel">
+      <h2>今日练习</h2>
+      <p>10 题随机抽取。交卷后显示分数、解析和错题。</p>
+      <div class="chips">
+        <span>Stall / AoA</span><span>Turns</span><span>Fog</span>
+        <span>Cloud base</span><span>METAR</span><span>Zulu</span><span>Airspace</span>
+      </div>
+      <button id="startBtn">Start quiz</button>
+    </section>
+
+    <section class="panel flightlog" aria-labelledby="flightLogTitle">
+      <div class="flightlog-head">
+        <div>
+          <p class="eyebrow">VIRTUAL FLIGHT LOG</p>
+          <h2 id="flightLogTitle">我们的飞行日志</h2>
+        </div>
+        <span class="logbook-stamp">LOGBOOK · 001</span>
+      </div>
+
+      <article class="flight-entry">
+        <div class="flight-route">
+          <span class="airport-code">KAVX</span>
+          <span class="route-line" aria-hidden="true">✈︎</span>
+          <span class="destination">Catalina Island</span>
+        </div>
+        <h3>Airport in the Sky</h3>
+        <p class="flight-note">
+          第一次 10/10 满分解锁。我们从 ground school 暂时下课，飞去 Catalina，
+          落地山脊上的小机场，再去 Avalon 和海边散步。
+        </p>
+        <div class="flight-meta">
+          <span>解锁方式：10/10</span>
+          <span>主题：First fly-out date</span>
+          <span>状态：已加入日志 ♥</span>
+        </div>
+      </article>
+
+      <p class="flightlog-foot">
+        以后每次解锁新的小众通航机场，就在这里加一条。慢慢把学习记录变成一张我们一起飞过的地图。
+      </p>
+    </section>
+
+    <form id="quizForm" class="hidden"></form>
+
+    <section id="resultPanel" class="panel hidden">
+      <div class="scoreline">
+        <div>
+          <p class="eyebrow">RESULT</p>
+          <h2 id="scoreText"></h2>
+        </div>
+        <div id="reward" class="reward"></div>
+      </div>
+      <div id="review"></div>
+      <button id="retryBtn">再来一轮</button>
+    </section>
+
+    <footer>
+      Study aid only · 不替代 CFI、官方 FAA 资料或正式飞行天气简报。
+    </footer>
+  </main>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
